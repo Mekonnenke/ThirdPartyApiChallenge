@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -23,6 +24,7 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  margin: -25px;
 }
 
 .time-block{
@@ -77,9 +79,7 @@ textarea{
   border-color: #ffffff;
  
 }
-.dateBox{
-  background-color: #06AED5;
-}
+
 
 .table-1{
   color: black;
@@ -93,7 +93,7 @@ textarea{
 }
 .table-3{
   color: black;
-  background-color:rgb(22, 190, 64) ;
+  
   border-color: #494747;
 }
 
@@ -101,4 +101,9 @@ textarea{
   color: #ffffff;
   font-size: 30px;
   align-items: center;
+}
+
+
+.dateBox{
+  background-color: #06AED5;
 }

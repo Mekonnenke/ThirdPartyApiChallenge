@@ -27,112 +27,154 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
-      <input type="date"  id="datepicker"/>
+      <div class = "dateBox">
+        <input type="date"  id="datepicker"/>
+      </div>
+     
     </header>
     <div class="container" id = "table-row">
      
       <!-- Timeblocks go here -->
-          <section class = "row form-group " id= "row1">
-              <div class="col-sm-1 table table-1 hour " >
-                <label class = "time-block" type="time" id= "hour-9"></label>
-                <input type="time" id="hour-9" class= "time-block" name="appt">
-              </div>
-              <div class="col-9 form-group table row1 table-2 text-white" id ="text">
-                <p class = "description "></p>
-              </div>
-              <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-                  <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-              </div>
-          </section>
-          <section class = "row form-group " id= "row2">
-            <div class="col-sm-1 table table-1 hour ">
-              <label type="time" id= "hour-10"></label>
-              <input type="time" id="hour-10" class= "time-block" name="appt">
-            </div>
-            <div class="col-9 form-group table row2 table-2 text-white" id ="text">
-              <p class = "description "></p>
-            </div>
-          
-            <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-                <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-            </div>
-          </section>
-          <section class = "row form-group " id= "row3">
-            <div class="col-sm-1 table table-1  hour"  >
-              <label type="time" id= "hour-11"></label>
-              <input type="time" id="hour-11" class= "time-block" name="appt">
-            </div>
-            
-            <div class="col-9 table table-2 text-white" id ="text">
-              <p class = "description "></p>
-            </div>
-            <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-                <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-            </div>
-          </section>
-          <section class = "row form-group " id= "row4">
-            <div class="col-sm-1 table table-1  hour" >
-              <label type="time" id= "hour-12"></label>
-              <input type="time" id="hour-12" class= "time-block" name="appt">
-            </div>
-            <div class="col-9 table table-2 text-white" id ="text">
-              <p class = "description "></p>
-            </div>
-            <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-                <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-            </div>
-          </section>
-          <section class = "row form-group " id= "row5">
-            <div class="col-sm-1 table table-1  hour">
-              <label type="time" id= "hour-13"></label>
-              <input type="time" id="hour-13" class= "time-block" name="appt">
-            </div>
-            <div class="col-9 table table-2 text-white" id ="text">
-              <p class = "description "></p>
-            </div>
-            <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-                <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-            </div>
-          </section>
-        <section class = "row form-group " id= "row6">
-          <div class="col-sm-1 table table-1  hour">
-            <label type="time" id= "hour-14"></label>
-            <input type="time" id="hour-14" class= "time-block" name="appt">
-          </div>
-          <div class="col-9 table table-2 text-white" id ="text">
-            <p class = "description "></p>
-          </div>
-        
-          <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-              <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-          </div>
-        </section>
-        <section class = "row form-group " id= "row7">
-          <div class="col-sm-1 table table-1  hour " >
-            <label type="time" id= "hour-15"></label>
-            <input type="time" id="hour-15" class= "time-block" name="appt">
-          </div>
-          <div class="col-9 table table-2 text-white" id ="text">
-            <p class = "description "></p>
-          </div>
-          <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-              <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-          </div>
-        </section>
-        <section class = "row form-group " id= "row8">
-          <div class="col-sm-1 table table-1 hour" >
-            <label type="time" id= "hour-16"></label>
-            <input type="time" id="hour-16" class= "time-block" name="appt">
-          </div>
-          <div class="col-9 table table-2 text-white" id ="text">
-            <p class = "description "></p>
-          </div>
-
-          <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-              <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-          </div>
-        </section>
+      <section class = "row form-group " id= "row1">
+        <div class="col-sm-1 table table-1 hour " >
+          <label class = "time-block" type="time" id= "hour-9"></label>
+          <input type="time" id="hour-9" class= "time-block" name="appt">
+        </div>
+        <div class="col-9 form-group table row1 table-2 text-white" id ="text">
+          <form action=>
+            <label for="textInput"></label>
+            <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+          </form>
+        </div>
+        <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+            <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+        </div>
+    </section>
+    <section class = "row form-group " id= "row2">
+      <div class="col-sm-1 table table-1 hour ">
+        <label type="time" id= "hour-10"></label>
+        <input type="time" id="hour-10" class= "time-block" name="appt">
+      </div>
+      <div class="col-9 form-group table row2 table-2 text-white" id ="text">
+        <form action=>
+          <label for="textInput"></label>
+          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+        </form>
+      </div>
     
+      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+      </div>
+    </section>
+    <section class = "row form-group " id= "row3">
+      <div class="col-sm-1 table table-1  hour"  >
+        <label type="time" id= "hour-11"></label>
+        <input type="time" id="hour-11" class= "time-block" name="appt">
+      </div>
+      
+      <div class="col-9 table table-2 text-white" id ="text">
+        <form action=>
+          <label for="textInput"></label>
+          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+        </form>
+      </div>
+      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+      </div>
+    </section>
+    <section class = "row form-group " id= "row4">
+      <div class="col-sm-1 table table-1  hour" >
+        <label type="time" id= "hour-12"></label>
+        <input type="time" id="hour-12" class= "time-block" name="appt">
+      </div>
+      <div class="col-9 table table-2 text-white" id ="text">
+        <form action=>
+          <label for="textInput"></label>
+          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+        </form>
+      </div>
+      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+      </div>
+    </section>
+    <section class = "row form-group " id= "row5">
+      <div class="col-sm-1 table table-1  hour">
+        <label type="time" id= "hour-13"></label>
+        <input type="time" id="hour-13" class= "time-block" name="appt">
+      </div>
+      <div class="col-9 table table-2 text-white" id ="text">
+        <form action=>
+          <label for="textInput"></label>
+          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+        </form>
+      </div>
+      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+      </div>
+    </section>
+  <section class = "row form-group " id= "row6">
+    <div class="col-sm-1 table table-1  hour">
+      <label type="time" id= "hour-14"></label>
+      <input type="time" id="hour-14" class= "time-block" name="appt">
+    </div>
+    <div class="col-9 table table-2 text-white" id ="text">
+      <form action=>
+        <label for="textInput"></label>
+        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+      </form>
+    </div>
+  
+    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+    </div>
+  </section>
+  <section class = "row form-group " id= "row7">
+    <div class="col-sm-1 table table-1  hour " >
+      <label type="time" id= "hour-15"></label>
+      <input type="time" id="hour-15" class= "time-block" name="appt">
+    </div>
+    <div class="col-9 table table-2 text-white" id ="text">
+      <form action=>
+        <label for="textInput"></label>
+        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+      </form>
+    </div>
+    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+    </div>
+  </section>
+  <section class = "row form-group " id= "row8">
+    <div class="col-sm-1 table table-1 hour" >
+      <label type="time" id= "hour-16"></label>
+      <input type="time" id="hour-16" class= "time-block" name="appt">
+    </div>
+    <div class="col-9 table table-2 text-white" id ="text">
+      <form action=>
+        <label for="textInput"></label>
+        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+      </form>
+    </div>
+
+    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+    </div>
+  </section>
+  <section class = "row form-group " id= "row9">
+    <div class="col-sm-1 table table-1 hour" >
+      <label type="time" id= "hour-17"></label>
+      <input type="time" id="hour-17" class= "time-block" name="appt">
+    </div>
+    <div class="col-9 table table-2 text-white" id ="text">
+      <form action=>
+        <label for="textInput"></label>
+        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+      </form>
+    </div>
+
+    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
+        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
+    </div>
+  </section>
     
     </div>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
