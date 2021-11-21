@@ -12,5 +12,5 @@ function displaytime(){
     $("#idtime").html(dt.toLocaleTimeString());
 
     setTimeout('displaytime()', 1000);
-
+}
 
