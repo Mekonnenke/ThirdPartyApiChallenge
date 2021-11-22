@@ -22,167 +22,38 @@
    
   </head>
 
-  <body class = "body">
+  <body>  
+     <!-- The header navbar and current date section -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-      <div class = "dateBox">
-        <input type="date"  id="datepicker"/>
-      </div>
-     
+      <p id="currentDay" class="lead"></p>   
     </header>
-    <div class="container" id = "table-row">
-     
+
+      <!-- The header navbar and current date section -->
+      <form id='formSchedule'>
       <!-- Timeblocks go here -->
-      <section class = "row form-group " id= "row1">
-        <div class="col-sm-1 table table-1 hour " >
-          <label class = "time-block" type="time" id= "hour-9"></label>
-          <input type="time" id="hour-9" class= "time-block" name="appt">
-        </div>
-        <div class="col-9 form-group table row1 table-2 text-white" id ="text">
-          <form action=>
-            <label for="textInput"></label>
-            <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-          </form>
-        </div>
-        <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-            <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-        </div>
-    </section>
-    <section class = "row form-group " id= "row2">
-      <div class="col-sm-1 table table-1 hour ">
-        <label type="time" id= "hour-10"></label>
-        <input type="time" id="hour-10" class= "time-block" name="appt">
-      </div>
-      <div class="col-9 form-group table row2 table-2 text-white" id ="text">
-        <form action=>
-          <label for="textInput"></label>
-          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-        </form>
-      </div>
-    
-      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-      </div>
-    </section>
-    <section class = "row form-group " id= "row3">
-      <div class="col-sm-1 table table-1  hour"  >
-        <label type="time" id= "hour-11"></label>
-        <input type="time" id="hour-11" class= "time-block" name="appt">
-      </div>
+    <div class="container" id="scheduleInput">
+      <div class= "col-1 md table" table ></div>
+      <div class= "col-9 md table"></div>
+      <div class= "col-1 md table">c</div>
+      </form>>
       
-      <div class="col-9 table table-2 text-white" id ="text">
-        <form action=>
-          <label for="textInput"></label>
-          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-        </form>
-      </div>
-      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-      </div>
-    </section>
-    <section class = "row form-group " id= "row4">
-      <div class="col-sm-1 table table-1  hour" >
-        <label type="time" id= "hour-12"></label>
-        <input type="time" id="hour-12" class= "time-block" name="appt">
-      </div>
-      <div class="col-9 table table-2 text-white" id ="text">
-        <form action=>
-          <label for="textInput"></label>
-          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-        </form>
-      </div>
-      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-      </div>
-    </section>
-    <section class = "row form-group " id= "row5">
-      <div class="col-sm-1 table table-1  hour">
-        <label type="time" id= "hour-13"></label>
-        <input type="time" id="hour-13" class= "time-block" name="appt">
-      </div>
-      <div class="col-9 table table-2 text-white" id ="text">
-        <form action=>
-          <label for="textInput"></label>
-          <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-        </form>
-      </div>
-      <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-          <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-      </div>
-    </section>
-  <section class = "row form-group " id= "row6">
-    <div class="col-sm-1 table table-1  hour">
-      <label type="time" id= "hour-14"></label>
-      <input type="time" id="hour-14" class= "time-block" name="appt">
-    </div>
-    <div class="col-9 table table-2 text-white" id ="text">
-      <form action=>
-        <label for="textInput"></label>
-        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
+      
+      <!-- <ul id="planner"> </ul> -->
+        <!-- <div id="plannerContainer"> </div> -->
+    </div>    
       </form>
-    </div>
+
+  <!-- Start Footer -->
   
-    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-    </div>
-  </section>
-  <section class = "row form-group " id= "row7">
-    <div class="col-sm-1 table table-1  hour " >
-      <label type="time" id= "hour-15"></label>
-      <input type="time" id="hour-15" class= "time-block" name="appt">
-    </div>
-    <div class="col-9 table table-2 text-white" id ="text">
-      <form action=>
-        <label for="textInput"></label>
-        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-      </form>
-    </div>
-    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-    </div>
-  </section>
-  <section class = "row form-group " id= "row8">
-    <div class="col-sm-1 table table-1 hour" >
-      <label type="time" id= "hour-16"></label>
-      <input type="time" id="hour-16" class= "time-block" name="appt">
-    </div>
-    <div class="col-9 table table-2 text-white" id ="text">
-      <form action=>
-        <label for="textInput"></label>
-        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-      </form>
-    </div>
 
-    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-    </div>
-  </section>
-  <section class = "row form-group " id= "row9">
-    <div class="col-sm-1 table table-1 hour" >
-      <label type="time" id= "hour-17"></label>
-      <input type="time" id="hour-17" class= "time-block" name="appt">
-    </div>
-    <div class="col-9 table table-2 text-white" id ="text">
-      <form action=>
-        <label for="textInput"></label>
-        <textarea id="description" class="description" rows="2" cols="80"> </textarea>       
-      </form>
-    </div>
-
-    <div class="col-1 table table-3 tetx-black saveBtn " id = "saveBtn">
-        <button class = " btn btn-green" ><i class = " fa fa-save" ckeckbox = "click"> </i></button>
-    </div>
-  </section>
+   </section>
     
     </div>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-      <script src="./assets/js/script.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+     <script src="./assets/js/script.js"></script>
   </body>
 </html>

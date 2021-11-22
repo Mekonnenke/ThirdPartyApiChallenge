@@ -1,44 +1,49 @@
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
-
+.lead{
+  color:rgb(66, 66, 66);
+}
 textarea{
   background: transparent;
   border: none;
-  resize: none;
+  resize: 100%;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  
 }
 
 .jumbotron {
   text-align: center;
   background-color: rgb(226, 226, 226);
-  color: black;
+  color: rgb(53, 43, 43);
   border-radius: 0;
   border-bottom: 10px solid black;
+  margin-bottom: 80px;
+  
 }
 
 .description{
   white-space: pre-wrap;
-  margin: -25px;
+  margin: 5px;
 }
 
 .time-block{
   text-align: center;
   border-radius: 15px;
+  margin-bottom: 10px;
 }
 
 .row {
   white-space: pre-wrap;
-  height: 3 0px;
+  height: 70px;
   border-top: 1px solid white;;
   border-radius: 20px ;
-  margin:-15px;
-  padding: 0;
+  margin:5px;
+  padding: 15;
 }
 
 .hour {
@@ -62,15 +67,18 @@ textarea{
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
+.saveIcon {
+  background-color: darkturquoise;
+  color: linen;
+  border-radius: 0px 20px 20px 0px;
+  /* float: right; */
+  font-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-.saveBtn i:hover {
+.saveIcon i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
@@ -103,7 +111,48 @@ textarea{
   align-items: center;
 }
 
+.dailyPlan {
+  color: black;  
+  font-size: 12pt;
+  height:100%;
+  width: 100%;
+}
 
-.dateBox{
-  background-color: #06AED5;
+
+/* media query for screen size to be applied to center text to switch at same time as navbar */
+@media (max-width: 570px) {
+  .container-fluid {
+    /* removes paddding on either side */
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .plannerRow {
+    height: 100%;
+    border-radius: 10;
+    margin: 10px;
+  }
+
+  .saveIcon { border-radius: 0 0 15px 15px; }
+
+  .timeBox { border-radius: 15px 15px 0 0; }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
+
+.wrapper
+{ 
+  padding: 20px;     
+} 
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+.shadowPulse {
+  animation: shadow-pulse 1s infinite;
 }
