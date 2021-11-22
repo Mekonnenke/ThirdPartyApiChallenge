@@ -8,7 +8,7 @@ This is the though one assignment on this boot camp. To develop the app I use in
 * I re-write the code and change/rename the majore variables.
 * I rewrite jquery variables to make the same with the css property in the assignmant source code.
 
-my git hub link
+my git hub link: https://github.com/Mekonnenke/ThirdPartyApiChallenge
 
 my assignment url https://mekonnenke.github.io/ThirdPartyApiChallenge/
 
@@ -17,6 +17,6 @@ my assignment url https://mekonnenke.github.io/ThirdPartyApiChallenge/
 
 
 
-
+here is the image link:
 
 ![1](https://user-images.githubusercontent.com/90818220/142804411-6bc36524-825a-4e4c-b750-7d6dc448d084.JPG)
