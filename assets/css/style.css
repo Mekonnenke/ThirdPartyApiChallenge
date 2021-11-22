@@ -111,13 +111,19 @@ textarea{
   align-items: center;
 }
 
-.dailyPlan {
+.textBoxSize {
   color: black;  
   font-size: 12pt;
   height:100%;
   width: 100%;
 }
+.footer{
 
+  background-color: lightgrey;
+  height: 100px;
+  text-align: center;
+  padding:30px
+}
 
 /* media query for screen size to be applied to center text to switch at same time as navbar */
 @media (max-width: 570px) {

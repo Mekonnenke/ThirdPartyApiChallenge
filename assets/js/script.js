@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
   
-    // test flag
+    // to test flag
     const test = false;
   
     // get times from moment
@@ -20,8 +20,8 @@ $(document).ready(function() {
   var $dateDisplay = $('#currentDay');
     $dateDisplay.text(now);
     
-    // using font awesome icon https://fontawesome.com/license
-    // change description here - none
+    
+    // this is the icon linc in images folder
     const saveIcon = "./assets/images/flopy.svg";  
   
     // Get stored todos from localStorage
@@ -32,15 +32,15 @@ $(document).ready(function() {
   
     // If plans were retrieved from localStorage, update the plan array to it
     if (descriptionStore !== null) {
-      planTextArr = descriptionStore;
+      textInput = descriptionStore;
     } else {
       // this should only occur on first time the app is loaded in the browser
       // helpfully remind user that lunch is important
-      planTextArr = new Array(9);
-      planTextArr[4] = "Picnic lunch outside";
+      textInput = new Array(9);
+      textInput[4] = "Here is the app loading text";
     }
   
-    if (test) { console.log("full array of plned text",planTextArr); }
+    if (test) { console.log("Long text input in the text box",textInput); }
   
     // set variable referencing planner element
     var $scheduler = $('#scheduleInput');
@@ -50,16 +50,16 @@ $(document).ready(function() {
     if (test) { console.log("current time",nowHour12); }
   
   
-    // build calendar by row for fix set of hours
-    for (let hour = 9; hour <= 17; hour++) {
+    //calander index display
+    for (var hour = 9; hour <= 17; hour++) {
       // index for array use offset from hour
     var index = hour - 9;
       
       // build row components
-      var $rowDiv = $('<div>');
-      $rowDiv.addClass('row');
-      $rowDiv.addClass('plannerRow');
-      $rowDiv.attr('hour-index',hour);
+      var $rowContainer = $('<div>');
+      $rowContainer.addClass('row');
+      $rowContainer.addClass('plannerRow');
+      $rowContainer.attr('hour-index',hour);
     
       // Start building Time box portion of row
       var $col2TimeDiv = $('<div>');
@@ -85,29 +85,29 @@ $(document).ready(function() {
       $timeBoxSpn.text(`${displayHour} ${both}`);
   
       // insert into col inset into timebox
-      $rowDiv.append($col2TimeDiv);
+      $rowContainer.append($col2TimeDiv);
       $col2TimeDiv.append($timeBoxSpn);
       // STOP building Time box portion of row
   
       // START building input portion of row
       // build row components
-      var $dailyPlanSpn = $('<textarea>');
+      var $textBoxEl = $('<textarea>');
   
-      $dailyPlanSpn.attr('id',`textarea-${index}`);
-      $dailyPlanSpn.attr('hour-index',index);
-      $dailyPlanSpn.attr('type','text');
-      $dailyPlanSpn.attr('class','dailyPlan');
+      $textBoxEl.attr('id',`textarea-${index}`);
+      $textBoxEl.attr('hour-index',index);
+      $textBoxEl.attr('type','text');
+      $textBoxEl.attr('class','textBoxSize');
   
       // access index from data array for hour 
-      $dailyPlanSpn.val( planTextArr[index] );
+      $textBoxEl.val(textInput[index] );
       
       // create col to control width
       let $col9IptDiv = $('<div>');
       $col9IptDiv.addClass('col-md-9');
   
       // add col width and row component to row
-      $rowDiv.append($col9IptDiv);
-      $col9IptDiv.append($dailyPlanSpn);
+      $rowContainer.append($col9IptDiv);
+      $col9IptDiv.append($textBoxEl);
       // STOP building Time box portion of row
   
       // START building save portion of row
@@ -120,15 +120,15 @@ $(document).ready(function() {
       $saveBtn.attr('class',"far fa-save saveIcon");
       
       // add col width and row component to row
-      $rowDiv.append($col1SaveDiv);
+      $rowContainer.append($col1SaveDiv);
       $col1SaveDiv.append($saveBtn);
       // STOP building save portion of row
   
       // set row color based on time
-      updateRowColor($rowDiv, hour);
+      updateRowColor($rowContainer, hour);
       
       // add row to planner container
-      $scheduler.append($rowDiv);
+      $scheduler.append($rowContainer);
     };
   
     //this function change color time depend of the 
@@ -154,23 +154,23 @@ $(document).ready(function() {
     $(document).on('click','i', function(event) {
       event.preventDefault();  
   
-      if (test) { console.log('click pta before '+ planTextArr); }
+      if (test) { console.log('click pta before '+textInput); }
   
       let $index = $(this).attr('save-id');
   
       let textareaId = '#textarea-'+$index;
       let $value = $(textareaId).val();
   
-      planTextArr[$index] = $value;
+      textInput[$index] = $value;
   
   
       if (test) { console.log('value ', $value); }
       if (test) { console.log('index ', $index); }
-      if (test) { console.log('click pta after '+ planTextArr); }
+      if (test) { console.log('click pta after '+ textInput); }
   
       // remove shawdow pulse class
       $(`#saveid-${$index}`).removeClass('shadowPulse');
-      localStorage.setItem("descriptionStore", JSON.stringify(planTextArr));
+      localStorage.setItem("descriptionStore", JSON.stringify(textInput));
     });  
     
     // function to color save button on change of input
