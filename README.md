@@ -10,7 +10,7 @@ This is the though one assignment on this boot camp. To develop the app I use in
 
 my git hub link
 
-my assignment link
+my assignment url https://mekonnenke.github.io/ThirdPartyApiChallenge/
 
 
 
