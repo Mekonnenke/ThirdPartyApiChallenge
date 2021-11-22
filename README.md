@@ -19,4 +19,5 @@ my assignment url https://mekonnenke.github.io/ThirdPartyApiChallenge/
 
 here is the image link:
 
-![1](https://user-images.githubusercontent.com/90818220/142804411-6bc36524-825a-4e4c-b750-7d6dc448d084.JPG)
+
+![1](https://user-images.githubusercontent.com/90818220/142806092-1df3c58a-21d7-4a11-9a5f-d16cc37aa61a.JPG)
